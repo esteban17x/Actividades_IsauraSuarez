@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hoja de vida de Ricardo Esteban Garzón Quintero">
+  <title>Hoja de vida | Ricardo Esteban Garzón Quintero</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --navy: #152b40;
+      --blue: #254f73;
+      --sky: #62bdd2;
+      --ink: #263445;
+      --muted: #536579;
+      --rule: #cbd9e6;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #e8eef4;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      line-height: 1.48;
+    }
+
+    .print-action {
+      display: block;
+      margin: 16px auto;
+      padding: 10px 16px;
+      border: 0;
+      border-radius: 4px;
+      background: var(--navy);
+      color: #fff;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .page {
+      width: min(100%, 900px);
+      min-height: 1123px;
+      margin: 28px auto;
+      display: grid;
+      grid-template-columns: 30% 70%;
+      grid-template-rows: auto 1fr;
+      overflow: hidden;
+      border: 2px solid var(--blue);
+      border-radius: 17px;
+      background: #fff;
+      box-shadow: 0 8px 30px rgb(22 39 57 / 10%);
+    }
+
+    .resume-header {
+      grid-column: 2;
+      grid-row: 1;
+      min-width: 0;
+      padding: 38px 40px 10px;
+    }
+
+    .sidebar {
+      grid-column: 1;
+      grid-row: 1 / span 2;
+      padding: 28px 23px;
+      background: var(--navy);
+      color: #f4f7fa;
+    }
+
+    .main-content {
+      grid-column: 2;
+      grid-row: 2;
+      min-width: 0;
+      padding: 16px 40px 34px;
+      background: #fff;
+    }
+
+    .photo {
+      display: block;
+      width: 118px;
+      height: 118px;
+      margin: 0 auto 22px;
+      border: 3px solid var(--sky);
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 24%;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--navy);
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: 0.25px;
+      line-height: 1.15;
+      text-transform: uppercase;
+    }
+
+    .sidebar section {
+      margin-top: 24px;
+    }
+
+    .sidebar h2 {
+      padding-bottom: 6px;
+      border-bottom: 1px solid rgb(255 255 255 / 35%);
+      color: #fff;
+      font-size: 13px;
+    }
+
+    .contact-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .contact-list li {
+      margin: 0 0 10px;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-list a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .main-content section {
+      margin-top: 22px;
+    }
+
+    h2 {
+      margin: 0 0 9px;
+      color: var(--navy);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+    }
+
+    .main-content h2 {
+      padding-bottom: 5px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .entry-title {
+      margin-bottom: 4px;
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .entry-detail {
+      margin-bottom: 10px;
+      color: var(--muted);
+    }
+
+    ul {
+      margin: 6px 0 0;
+      padding-left: 18px;
+    }
+
+    li {
+      margin: 4px 0;
+      padding-left: 2px;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        background: #fff;
+      }
+
+      .page {
+        min-height: 0;
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      .resume-header {
+        grid-column: 1;
+        grid-row: 1;
+        padding: 26px 22px 10px;
+      }
+
+      .sidebar {
+        grid-column: 1;
+        grid-row: 2;
+        padding: 23px 22px;
+      }
+
+      .sidebar section {
+        margin-top: 20px;
+      }
+
+      .photo {
+        width: 96px;
+        height: 96px;
+        margin-bottom: 18px;
+      }
+
+      .main-content {
+        grid-column: 1;
+        grid-row: 3;
+        padding: 10px 22px 28px;
+      }
+
+      h1 {
+        font-size: 27px;
+      }
+
+      .main-content section {
+        margin-top: 19px;
+      }
+    }
+
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    @media print {
+      body {
+        background: #fff;
+        color: #1f2933;
+        font-size: 9pt;
+        line-height: 1.36;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+
+      .print-action {
+        display: none;
+      }
+
+      .page {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 0;
+        grid-template-columns: 30% 70%;
+        grid-template-rows: auto 1fr;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      .resume-header {
+        grid-column: 2;
+        grid-row: 1;
+        padding: 11mm 11mm 3mm;
+      }
+
+      .sidebar {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+        padding: 9mm 6mm;
+      }
+
+      .main-content {
+        grid-column: 2;
+        grid-row: 2;
+        padding: 2mm 11mm 9mm;
+      }
+
+      .photo {
+        width: 27mm;
+        height: 27mm;
+        margin-bottom: 6mm;
+      }
+
+      h1 {
+        font-size: 20pt;
+        letter-spacing: 0.1px;
+      }
+
+      .sidebar section {
+        margin-top: 16pt;
+      }
+
+      .sidebar h2 {
+        font-size: 9pt;
+      }
+
+      .contact-list li {
+        margin-bottom: 7pt;
+      }
+
+      .main-content section {
+        margin-top: 15pt;
+        break-inside: avoid;
+      }
+
+      h2 {
+        margin-bottom: 6pt;
+        font-size: 9.5pt;
+      }
+
+      ul {
+        margin-top: 4pt;
+      }
+
+      li {
+        margin: 2pt 0;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="print-action" type="button" onclick="window.print()">
+    Guardar como PDF / Imprimir
+  </button>
+
+  <main class="page">
+    <header class="resume-header">
+      <h1>Ricardo Esteban Garzón Quintero</h1>
+    </header>
+
+    <aside class="sidebar" aria-label="Fotografía, datos personales y conocimientos">
+      <img class="photo" src="foto-ricardo-garzon.jpg" alt="Fotografía de Ricardo Esteban Garzón Quintero">
+
+      <section aria-labelledby="contacto">
+        <h2 id="contacto">Datos personales</h2>
+        <ul class="contact-list">
+          <li>Bogotá, Colombia</li>
+          <li><a href="tel:3214152139">3214152139</a></li>
+          <li><a href="mailto:estebanp.1707@gmail.com">estebanp.1707@gmail.com</a></li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="conocimientos">
+        <h2 id="conocimientos">Conocimientos técnicos</h2>
+        <ul>
+          <li>Manejo básico de computadores y herramientas digitales.</li>
+          <li>Microsoft Word y Excel.</li>
+          <li>HTML y CSS.</li>
+          <li>Java.</li>
+          <li>SQL y MySQL.</li>
+          <li>Git y GitHub.</li>
+        </ul>
+      </section>
+    </aside>
+
+    <div class="main-content">
+      <section aria-labelledby="perfil">
+        <h2 id="perfil">Perfil profesional</h2>
+        <p>
+          Bachiller y aprendiz del programa Tecnólogo en Análisis y Desarrollo de Software del SENA.
+          Cuento con experiencia laboral informal en ventas, atención al cliente, apoyo en
+          establecimientos comerciales, domicilios y actividades operativas. Poseo conocimientos en
+          herramientas informáticas, Microsoft Word y Excel, HTML, CSS, Java, SQL, MySQL, Git y
+          GitHub. Me caracterizo por ser una persona responsable, comprometida, con capacidad de
+          adaptación, trabajo en equipo y disposición para aprender. Busco una oportunidad laboral
+          que me permita aportar mis habilidades, adquirir nuevos conocimientos y crecer
+          profesionalmente.
+        </p>
+      </section>
+
+      <section aria-labelledby="experiencia">
+        <h2 id="experiencia">Experiencia laboral</h2>
+        <p class="entry-title">Experiencia informal – Actividades comerciales y operativas</p>
+        <ul>
+          <li>Ventas, atención al cliente y apoyo comercial.</li>
+          <li>Atención y colaboración en establecimientos.</li>
+          <li>Entrega de productos y realización de domicilios.</li>
+          <li>Apoyo en actividades de construcción.</li>
+          <li>Colaboración en negocios familiares.</li>
+          <li>Realización de trabajos ocasionales y tareas operativas.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="formacion">
+        <h2 id="formacion">Formación académica</h2>
+        <p class="entry-title">Tecnólogo en Análisis y Desarrollo de Software (ADSO)</p>
+        <p class="entry-detail">SENA – Actualmente en formación</p>
+        <p class="entry-title">Bachiller</p>
+        <p>Educación media culminada.</p>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
